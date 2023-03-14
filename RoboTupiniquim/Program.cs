@@ -5,23 +5,12 @@
         static void Main(string[] args)
         {
             int posicaoX , posicaoY = 0;
-            int limiteX , limiteY = 0;
+            int limiteX = 5 , limiteY = 5; //LIMITE DO MAPA DO JOGO
             char direcao = 'N';
             string comando;
 
             for (int a = 0; a < 2; a++)
             {
-                //LIMITE
-                Console.WriteLine("Insira o limite X do mapa: "); 
-                limiteX = int.Parse(Console.ReadLine());
-
-                Console.WriteLine();
-
-                Console.WriteLine("Insira o limite Y do mapa: "); 
-                limiteY = int.Parse(Console.ReadLine());
-
-                Console.WriteLine();
-
                 //POSIÇÕES
                 Console.WriteLine("Insira a posição inicial X: ");
                 posicaoX = int.Parse(Console.ReadLine());
@@ -36,7 +25,6 @@
                 //DIREÇÃO
                 Console.WriteLine("Digite a direção inicial:");
                 direcao = char.Parse(Console.ReadLine());
-
                 Console.WriteLine();
 
                 //COMANDO
