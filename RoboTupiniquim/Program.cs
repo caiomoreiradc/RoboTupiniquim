@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            //LUÍSA TE AMO
             int posicaoX , posicaoY = 0;
             int limiteX , limiteY = 0;
             char direcao = 'N';
