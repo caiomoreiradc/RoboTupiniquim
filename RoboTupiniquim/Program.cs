@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             int robo = 0;
-            int posicaoX , posicaoY = 0;
+            int posX , posY = 0;
             int limiteX = 5 , limiteY = 5;      //LIMITE DO MAPA DO JOGO
             char direcao = 'N';
             string comando;             
@@ -14,12 +14,12 @@
             {
                 //POSIÇÕES
                 Console.WriteLine("Insira a posição inicial X: ");
-                posicaoX = int.Parse(Console.ReadLine());
+                posX = int.Parse(Console.ReadLine());
 
                 Console.WriteLine();
 
                 Console.WriteLine("Insira a posição inicial Y: ");
-                posicaoY = int.Parse(Console.ReadLine());
+                posY = int.Parse(Console.ReadLine());
 
                 Console.WriteLine();
 
@@ -43,19 +43,19 @@
                     {
                         if (direcao == 'N')
                         {
-                            posicaoY = posicaoY + 1;
+                            posY = posY + 1;
                         }
                         if (direcao == 'S')
                         {
-                            posicaoY = posicaoY - 1;
+                            posY = posY - 1;
                         }
                         if (direcao == 'L')
                         {
-                            posicaoX = posicaoX + 1;
+                            posX = posX + 1;
                         }
                         if (direcao == 'O')
                         {
-                            posicaoX = posicaoX - 1;
+                            posX = posX - 1;
                         }
                     }
 
@@ -104,13 +104,13 @@
 
                 //VERIFICA SE O ROBÔ ESTÁ DENTRO DOS LIMITES DO PLANO
 
-                if (posicaoX < 0 || posicaoX > limiteX)
+                if (posX < 0 || posX > limiteX)
                 {
                     Console.WriteLine();
                     Console.WriteLine("Robô fora dos limites dos equipamentos!!");
                     Console.WriteLine("Cuidado!");
                 }
-                else if (posicaoY < 0 || posicaoY > limiteY)
+                else if (posY < 0 || posY > limiteY)
                 {
                     Console.WriteLine();
                     Console.WriteLine("Robô fora dos limites dos equipamentos!!");
@@ -121,13 +121,13 @@
                 if (robo == 1)
                 { 
                     Console.WriteLine();
-                    Console.WriteLine("A posição final do robô 1 é: " + posicaoX + "," + posicaoY + "," + direcao + ".");
+                    Console.WriteLine("A posição final do robô 1 é: " + posX + "," + posY + "," + direcao + ".");
                     Console.WriteLine();
                 }
                 else if (robo == 2)
                 {
                     Console.WriteLine();
-                    Console.WriteLine("A posição final do robô2 é: " + posicaoX + "," + posicaoY + "," + direcao + ".");
+                    Console.WriteLine("A posição final do robô2 é: " + posX + "," + posY + "," + direcao + ".");
                     Console.WriteLine();
                     Console.ReadKey();
                 }
