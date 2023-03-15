@@ -4,10 +4,11 @@
     {
         static void Main(string[] args)
         {
+            int robo = 0;
             int posicaoX , posicaoY = 0;
-            int limiteX = 5 , limiteY = 5; //LIMITE DO MAPA DO JOGO
+            int limiteX = 5 , limiteY = 5;      //LIMITE DO MAPA DO JOGO
             char direcao = 'N';
-            string comando;
+            string comando;             
 
             for (int a = 0; a < 2; a++)
             {
@@ -30,6 +31,7 @@
                 //COMANDO
                 Console.WriteLine("Digite o comando:");
                 comando = Console.ReadLine();
+                robo++;                                              //UTILIZADA PARA IDENTIFICAR SE É O ROBOÔ 1 OU 2
 
                 Console.WriteLine();
 
@@ -103,22 +105,32 @@
                 //VERIFICA SE O ROBÔ ESTÁ DENTRO DOS LIMITES DO PLANO
 
                 if (posicaoX < 0 || posicaoX > limiteX)
-                    {
-                        Console.WriteLine();
-                        Console.WriteLine("Robô fora dos limites dos equipamentos!!");
-                        Console.WriteLine("Cuidado!");
-                    }
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Robô fora dos limites dos equipamentos!!");
+                    Console.WriteLine("Cuidado!");
+                }
                 else if (posicaoY < 0 || posicaoY > limiteY)
-                    {
-                        Console.WriteLine();
-                        Console.WriteLine("Robô fora dos limites dos equipamentos!!");
-                        Console.WriteLine("Cuidado!");
-                    }
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Robô fora dos limites dos equipamentos!!");
+                    Console.WriteLine("Cuidado!");
+                }
 
                 //OUTPUT DA POSIÇÃO FINAL
-                Console.WriteLine();
-                Console.WriteLine("A posição final é: " + posicaoX + "," + posicaoY + "," + direcao + ".");
-                Console.WriteLine();
+                if (robo == 1)
+                { 
+                    Console.WriteLine();
+                    Console.WriteLine("A posição final do robô 1 é: " + posicaoX + "," + posicaoY + "," + direcao + ".");
+                    Console.WriteLine();
+                }
+                else if (robo == 2)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("A posição final do robô2 é: " + posicaoX + "," + posicaoY + "," + direcao + ".");
+                    Console.WriteLine();
+                    Console.ReadKey();
+                }
             }
 
 
